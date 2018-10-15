@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export KUBECONFIG=./kube-config
+export KUBECONFIG=.config/kube-config
 
 # Setup helm's tiller with k8s on Google Cloud
 

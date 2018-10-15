@@ -2,13 +2,13 @@
 
 export app_name=amp-endava
 
-export KUBECONFIG=./kube-config
+export KUBECONFIG=./config/kube-config
 
 # Install the amp stack with helm
 
 echo -e "\nInstalling the amp stack with helm..."
 
-helm install --name $app_name -f amp-helm-params.yaml stable/lamp
+helm install --name $app_name -f config/amp-helm-params.yaml stable/lamp
 result=$?
 (( result )) && { echo -e "\nHelm failed with $result.\nTry setting a new app_name in the init.sh script.\n\n" ; exit $result ; }
 
@@ -36,7 +36,7 @@ echo -e "\n\nPopulating web content...\n"
 POD=$(kubectl get pods -o=name)
 POD=${POD#pod/}
 
-kubectl cp ../*.php ${POD}:/var/www/html
+kubectl -c httpd cp html ${POD}:/var/www
 
 echo -e "\nFinished isntallation!!!"
 echo -e "\nOpen http://$CHARTIP in the browser :-)\n\n"
