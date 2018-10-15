@@ -30,13 +30,8 @@ do
 	(( elapsed > max_time )) && { echo -e "\n\nSomething is wrong. Can't wait any more." ; exit 1 ; }
 done
 
-echo -e "\n\nPopulating web content...\n"
-
-# Get pod name (we only have one pod)
-POD=$(kubectl get pods -o=name)
-POD=${POD#pod/}
-
-kubectl -c httpd cp html ${POD}:/var/www
+# Upload initial web content
+./upload.sh
 
 echo -e "\nFinished isntallation!!!"
 echo -e "\nOpen http://$CHARTIP in the browser :-)\n\n"
