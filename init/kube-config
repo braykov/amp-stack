@@ -1,0 +1,26 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURDekNDQWZPZ0F3SUJBZ0lRT1JKMjRPV1BlaGhKempYMjNGY2xFREFOQmdrcWhraUc5dzBCQVFzRkFEQXYKTVMwd0t3WURWUVFERXlSa09UWm1OelF4TlMxa1pqazJMVFJtTXpBdE9ETTJOeTFsTm1aaU5qZ3haREkwWldZdwpIaGNOTVRneE1ERXpNVGt3TlRRMFdoY05Nak14TURFeU1qQXdOVFEwV2pBdk1TMHdLd1lEVlFRREV5UmtPVFptCk56UXhOUzFrWmprMkxUUm1NekF0T0RNMk55MWxObVppTmpneFpESTBaV1l3Z2dFaU1BMEdDU3FHU0liM0RRRUIKQVFVQUE0SUJEd0F3Z2dFS0FvSUJBUURoRWplaUVKSHdaamtnNmQ5bHg4SUR3SXhWQXNMbEh2R0IrSjZIMDBybwo1QzU0dWd1TEI4Z0o5MlBhcUdyZkZ3enl1SnlxdGI2ZDlaNzlnQWJXekpkNGhUbUQ1VDZiczhxQVNVbFA5d2hxCk1tdVI5eXhOM0cvT2lTZzlIejJRWmRaR1pNUkdMc2pLREZhdzBZbCtpbHAwS1ZDQVM1N1dta1hWZjVUcnJXYm8KMGxORFViMkxmQTZoS3RFaHhaVlZPcTh5Q0g0RDBaTWZpMFRQOGt1aTB2QTRxSS9wL3NSNmpER3JuMEt2RnJPRQpwRjdWTFBXbUxkVmRtYmkwVWJMNXNLYlJXSHFLWVpIYTZlZWhLdXlXbVJ1TUtiTnpXUVlhd0pqWDNzZlN5bzByClphTHV4bXozNFZDQTlpbE5ocU9Tc1RBWG1tT3k0d1lQTmtuQSt3VDVlVEQvQWdNQkFBR2pJekFoTUE0R0ExVWQKRHdFQi93UUVBd0lDQkRBUEJnTlZIUk1CQWY4RUJUQURBUUgvTUEwR0NTcUdTSWIzRFFFQkN3VUFBNElCQVFEQQprNHNmdERYZVl2YWtRL1d1bmpZaThTWENJckJSM212bk90YUZJOWJnZk96Vkh5Q0hFR1BEMkowd1NtQm8wYmFwCmZEV2FycnhQQTNuWjFhdHhIb0pxTzNqOUNJMmlwSEdJOG1zVHlXa3NrMTNXNFVGSGFTRHBUbCtUalQzR2s5V3oKY1dKMit4OWZ5KzJlUWRyT1krd1Bua2cwZmVqYWdXWmZKaktYVVhiMjYwcEhjeWg4d25xelVFSWVKWHVROXhMagpTVVB1WE9aNDN2SENlV0xpcXJtdUNncVBxclc4Y3I2NHlxZTFjQTFPMk5yRm9NeS9TMjV6MEVyY1JVeDRVRXJLCnpobWI4KzlHUWVML0FheGs5MDBIdmFHVXE5V2VWeXlSeGpYbWZRSmpTdzBsa2EyUG5IVlJIKzZKaU8vQWptQ2MKd2l2UGlNRC9EZkxTZE04SzY5cG8KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    server: https://35.204.20.8
+  name: gke_united-catfish-218121_europe-west4-c_amp-cluster
+contexts:
+- context:
+    cluster: gke_united-catfish-218121_europe-west4-c_amp-cluster
+    user: gke_united-catfish-218121_europe-west4-c_amp-cluster
+  name: gke_united-catfish-218121_europe-west4-c_amp-cluster
+current-context: gke_united-catfish-218121_europe-west4-c_amp-cluster
+kind: Config
+preferences: {}
+users:
+- name: gke_united-catfish-218121_europe-west4-c_amp-cluster
+  user:
+    auth-provider:
+      config:
+        access-token: ya29.Glw3BhpIfsogg29lEEXgrMNZ90_0P3TfCxh6QgXT-Ix1HzotOY_YoMqnuJ5gQuXHtQL0_mU67_9AzQw9dBnfF4X6zEmmNjh-8BKVKjMKPR523GhTrMjgjIqQ02KiDg
+        cmd-args: config config-helper --format=json
+        cmd-path: /usr/lib/google-cloud-sdk/bin/gcloud
+        expiry: 2018-10-15T11:48:19Z
+        expiry-key: '{.credential.token_expiry}'
+        token-key: '{.credential.access_token}'
+      name: gcp
